@@ -1,0 +1,18 @@
+$fa-font-path:"~font-awesome/fonts";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+// font-awesome bug with paths fix
+@font-face {
+  font-family: 'FontAwesome';
+  src: font-url('#{$fa-font-path}/fontawesome-webfont.eot');
+  src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?') format('embedded-opentype'),
+  font-url('#{$fa-font-path}/fontawesome-webfont.woff2') format('woff2'),
+  font-url('#{$fa-font-path}/fontawesome-webfont.woff') format('woff'),
+  font-url('#{$fa-font-path}/fontawesome-webfont.ttf') format('truetype'),
+  font-url('#{$fa-font-path}/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}

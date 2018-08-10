@@ -11,7 +11,7 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
-import "phoenix_html"
+// import "phoenix_html"
 
 // Import local files
 //
@@ -22,3 +22,24 @@ import "phoenix_html"
 
 console.log('••••')
 console.log('••••')
+
+
+require('../css/app.scss');
+
+import axios from 'axios';
+import 'phoenix_html';
+import Vue from 'vue/dist/vue.js';
+import 'bootstrap';
+
+const app = new Vue({
+  el: '#app',
+  data: {
+    urls: {login: null, register: null},
+    error: false
+  }
+});
+
+// axios
+//   .get('/api/config/quark')
+//   .then(function(response) { app.urls = response.data; })
+//   .catch(function() { app.error = true; });
